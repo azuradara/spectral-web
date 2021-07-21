@@ -1,6 +1,7 @@
 {
   "extends": ["eslint:recommended", "next", "next/core-web-vitals"],
   "rules": {
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "no-undef": false
   }
 }
