@@ -22,7 +22,13 @@ const PreFooter = () => {
             <h3>Download</h3>
             <Image src={downloadIcon} height={24} width={24} />
           </button>
-          <button className="appBtn_Btn Btn__secondary">
+          <button
+            onClick={() =>
+              (window.location.href =
+                'https://github.com/azuradara/spectral-app')
+            }
+            className="appBtn_Btn Btn__secondary"
+          >
             <h3>View Source</h3>
             <Image src={githubIcon} height={32} width={32} />
           </button>
