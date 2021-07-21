@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Image from 'next/image';
 
 import logoFillIcon from 'assets/svg/logo_fill_ico.svg';
