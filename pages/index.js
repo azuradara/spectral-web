@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from 'styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Spectral - A new tab replacement</title>
       </Head>
       <h1>cat</h1>
     </div>

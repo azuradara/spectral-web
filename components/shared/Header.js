@@ -5,10 +5,12 @@ import Link from 'next/link'
 
 import logoText from 'assets/svg/logo_text.svg'
 import logoIcon from 'assets/svg/logo_ico.svg'
+import menuIcon from 'assets/svg/menu_ico.svg'
 
 const Header = () => {
 
   const [scrolled, setScrolled] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
 
   useEffect(() => {
     const watchScroll = () => {
@@ -26,8 +28,12 @@ const Header = () => {
     }
   }, [])
 
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu)
+  }
+
   return (
-    <header className={`header ${scrolled ? 'headerScroll' : ''}`}>
+    <header className={`header ${scrolled && !mobileMenu ? 'headerScroll' : ''}`}>
       {/* LOGO */}
       <div className='contentContainer'>
         <Link href="/">
@@ -48,12 +54,30 @@ const Header = () => {
           </div>
         </div>
 
+        {/* SPACER FOR MOBILE */}
+        <div className="mobile spacer"></div>
+
         {/* AUTH ROW */}
         <div className='authRow'>
           <a className='signUp' href="/signup">Sign up</a>
           <button className='appBtn_Btn' type="submit">App --</button>
         </div>
+
+        <div onClick={() => toggleMobileMenu()} className="mobile menuToggle">
+          <Image src={menuIcon} height={20} width={20} />
+        </div>
       </div>
+
+      {Boolean(mobileMenu) && (
+        <div className="mobile mobileMenu">
+          <div className='navigation'>
+            <div className='content'>
+              <Link className='secondary' href="/changelog">Changelog</Link>
+              <Link className='secondary' href="/about">About us</Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }

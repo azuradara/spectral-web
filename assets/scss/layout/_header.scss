@@ -51,36 +51,35 @@
 .desktop {
   display: flex;
   flex-grow: 1;
-}
 
-.navigation {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-}
+  .navigation {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 
-.content {
-  padding: 0 40px;
-  display: flex;
-  flex-grow: 1;
-  max-width: 250px;
-  justify-content: space-between;
-  align-items: justify;
-
-  a {
-    font-size: 14px;
-    text-decoration: none;
-    color: #D0D6E0;
-    flex-shrink: 0;
-    transition: color 200ms;
-  
-    &:hover {
-      color: white;
+    .content {
+      padding: 0 40px;
+      display: flex;
+      flex-grow: 1;
+      max-width: 250px;
+      justify-content: space-between;
+      align-items: justify;
+    
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #D0D6E0;
+        flex-shrink: 0;
+        transition: color 200ms;
+      
+        &:hover {
+          color: white;
+        }
+      }
     }
   }
 }
-
 
 .authRow {
   display: flex;
@@ -104,9 +103,16 @@
 .logo {
   display: flex;
   align-items: center;
-  
+  min-width: max-content;
+
   img {
     cursor: pointer;
+    min-width: 100%;
+    height: auto;
+  }
+  
+  * {
+    flex-shrink: 0;
   }
 }
 
@@ -128,5 +134,64 @@
   &:hover {
     box-shadow: rgba($color: crimson, $alpha: .5) 0px 1px 40px;
     transition: all 150ms ease 0s;
+  }
+}
+
+.menuToggle {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .navigation {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .content {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 0 0 12px 0px;
+      margin: 0;
+      max-width: unset;
+      
+      a {
+        display: flex;
+        padding: 8px 24px 8px 76px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #f4f5ff;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.mobile {
+  display: none;
+  min-width: max-content;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .mobile {
+    display: flex;
   }
 }
