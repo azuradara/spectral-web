@@ -34,7 +34,18 @@
   a {
     display: flex;
     align-items: center;
-
+    
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #D0D6E0;
+      flex-shrink: 0;
+      transition: color 200ms;
+    
+      &:hover {
+        color: black;
+      }
+    }
     
     svg {
       text-decoration: none;
@@ -64,19 +75,9 @@
   max-width: 250px;
   justify-content: space-between;
   align-items: justify;
+  
 }
 
-.secondary {
-  font-size: 14px;
-  text-decoration: none;
-  color: #D0D6E0;
-  flex-shrink: 0;
-  transition: color 200ms;
-
-  &:hover {
-    color: white;
-  }
-}
 
 .authRow {
   display: flex;
