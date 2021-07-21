@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import angleRIcon from 'assets/svg/angle-r_ico.svg';
+import downloadIcon from 'assets/svg/download.svg';
 
 const Splash = () => {
   return (
@@ -77,7 +77,7 @@ const Splash = () => {
         >
           <button className="appBtn_Btn">
             <h3>Download Spectral</h3>
-            <Image src={angleRIcon} />
+            <Image src={downloadIcon} height={24} width={24} />
           </button>
         </motion.span>
         <div className="spacer2" />

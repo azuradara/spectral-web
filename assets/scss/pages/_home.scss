@@ -32,21 +32,21 @@
       margin-top: 0.8em;
       margin-bottom: 1.2em;
     }
-
     .appBtn_Btn {
       border: medium none;
       cursor: pointer;
       border-radius: 8px;
-      padding: 0 2.6rem;
+      padding: 0 2rem;
       font-size: 1.2rem;
       height: 4rem;
 
       h3 {
         margin-top: 0.5rem;
+        margin-right: 1rem;
       }
 
       img {
-        margin-top: 0.1rem !important;
+        margin-bottom: 0.15rem !important;
       }
     }
   }
@@ -58,12 +58,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .wireframe {
-      max-height: 65vw !important;
-      flex-shrink: 0 !important;
-      margin: 0 -1000px 0 -1000px !important;
-    }
   }
 }
 
@@ -72,6 +66,7 @@
   padding-bottom: 140px;
   background-color: #1c1d1f;
   overflow-x: hidden;
+  z-index: 0;
 
   .contentContainer {
     max-width: 1200px;
@@ -149,5 +144,86 @@
         margin-top: 0.8em;
       }
     }
+  }
+}
+
+.alternate {
+  background-color: unset;
+}
+
+.prefooter {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  img {
+    height: 105px;
+    width: 105px;
+    border-radius: 25px;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    ._container {
+      margin-top: 3rem;
+      margin-bottom: 3em;
+
+      h1 {
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .appBtn_Btn {
+      border: medium none;
+      min-width: 240px;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 0 2rem;
+      font-size: 1.2rem;
+      height: 4rem;
+
+      h3 {
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+      }
+
+      img {
+        margin-bottom: 0.15rem !important;
+        height: 24px;
+        width: 32px;
+        border-radius: 0;
+      }
+    }
+
+    .Btn__secondary {
+      background: rgba($color: #fff, $alpha: 0.05);
+      border: 2px solid rgba($color: #fff, $alpha: 0.1);
+
+      &:hover {
+        box-shadow: none;
+        background: rgba($color: #fff, $alpha: 0.07);
+        border-color: rgba($color: #fff, $alpha: 0.15);
+      }
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .prefooter .appBtn_Btn {
+    width: 100%;
   }
 }
