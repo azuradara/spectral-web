@@ -1,55 +1,60 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import logoText from 'assets/svg/logo_text.svg'
-import logoIcon from 'assets/svg/logo_ico.svg'
-import menuIcon from 'assets/svg/menu_ico.svg'
+import logoText from 'assets/svg/logo_text.svg';
+import logoIcon from 'assets/svg/logo_ico.svg';
+import menuIcon from 'assets/svg/menu_ico.svg';
+import angleRIcon from 'assets/svg/angle-r_ico.svg';
 
 const Header = () => {
-
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenu, setMobileMenu] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
     const watchScroll = () => {
       if (window.scrollY >= 10) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener('scroll', watchScroll)
+    window.addEventListener('scroll', watchScroll);
 
     return function unMount() {
-      window.removeEventListener('scroll', watchScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', watchScroll);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
-    setMobileMenu(!mobileMenu)
-  }
+    setMobileMenu(!mobileMenu);
+  };
 
   return (
-    <header className={`header ${scrolled && !mobileMenu ? 'headerScroll' : ''}`}>
+    <header
+      className={`header ${scrolled && !mobileMenu ? 'headerScroll' : ''}`}
+    >
       {/* LOGO */}
-      <div className='contentContainer'>
+      <div className="contentContainer">
         <Link href="/">
-          <div className='logo'>
+          <div className="logo">
             <Image src={logoIcon} height={32} width={32} />
             <Image src={logoText} height={22} width="100%" />
           </div>
         </Link>
 
-
         {/* DEKSTOP NAVIGATION */}
-        <div className='desktop'>
-          <div className='navigation'>
-            <div className='content'>
-              <Link className='secondary' href="/changelog">Changelog</Link>
-              <Link className='secondary' href="/about">About us</Link>
+        <div className="desktop">
+          <div className="navigation">
+            <div className="content">
+              <Link className="secondary" href="/changelog">
+                Changelog
+              </Link>
+              <Link className="secondary" href="/about">
+                About us
+              </Link>
             </div>
           </div>
         </div>
@@ -58,9 +63,14 @@ const Header = () => {
         <div className="mobile spacer"></div>
 
         {/* AUTH ROW */}
-        <div className='authRow'>
-          <a className='signUp' href="/signup">Sign up</a>
-          <button className='appBtn_Btn' type="submit">App --</button>
+        <div className="authRow">
+          <a className="signUp" href="/signup">
+            Sign up
+          </a>
+          <button className="appBtn_Btn" type="submit">
+            <p>App</p>
+            <Image src={angleRIcon} height={14} width={14} />
+          </button>
         </div>
 
         <div onClick={() => toggleMobileMenu()} className="mobile menuToggle">
@@ -70,16 +80,20 @@ const Header = () => {
 
       {Boolean(mobileMenu) && (
         <div className="mobile mobileMenu">
-          <div className='navigation'>
-            <div className='content'>
-              <Link className='secondary' href="/changelog">Changelog</Link>
-              <Link className='secondary' href="/about">About us</Link>
+          <div className="navigation">
+            <div className="content">
+              <Link className="secondary" href="/changelog">
+                Changelog
+              </Link>
+              <Link className="secondary" href="/about">
+                About us
+              </Link>
             </div>
           </div>
         </div>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

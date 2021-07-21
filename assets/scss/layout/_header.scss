@@ -117,8 +117,8 @@
 }
 
 .appBtn_Btn {
-  color: white;
-  background: rgba(0, 0, 0, 0) linear-gradient(135.88deg, #c31432 9.16%, rgb(182, 16, 99) 60.89%, #7c0e2b 90.72%) repeat scroll 0% 0%;
+  color: #D0D6E0;
+  background: rgba(0, 0, 0, 0) linear-gradient(135.88deg, #c31432 9.16%, rgb(182, 16, 66) 60.89%, #7c0e2b 90.72%) repeat scroll 0% 0%;
   cursor: pointer;
   border: medium none;
   flex-shrink: 0;
@@ -130,6 +130,14 @@
   height: 2rem;
   padding: 0px 1rem;
   font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+
+  p {
+    padding-top: 3px;
+  }
 
   &:hover {
     box-shadow: rgba($color: crimson, $alpha: .5) 0px 1px 40px;
