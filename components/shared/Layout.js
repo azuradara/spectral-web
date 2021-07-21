@@ -1,14 +1,14 @@
-import Header from './Header'
-
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
     <div className="container">
       <Header />
+      <div className="Layout__Content">{children}</div>
+      <Footer />
+    </div>
+  );
+};
 
-      {children}
-    </div >
-  )
-}
-
-export default Layout
+export default Layout;

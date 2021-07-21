@@ -1,3 +1,153 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+#splash {
+  margin-top: 0px;
+  padding: 160px 0 0 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // overflow: hidden;
+  position: relative;
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      max-width: 900px;
+      font-size: clamp(2.2rem, 10vw, 4.4rem);
+      font-weight: 900;
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+
+    p {
+      max-width: 720px;
+      font-size: 1.6rem;
+      color: #726a6a;
+      line-height: 1.5;
+      margin-top: 0.8em;
+      margin-bottom: 1.2em;
+    }
+
+    .appBtn_Btn {
+      border: medium none;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 0 2.6rem;
+      font-size: 1.2rem;
+      height: 4rem;
+
+      h3 {
+        margin-top: 0.5rem;
+      }
+
+      img {
+        margin-top: 0.1rem !important;
+      }
+    }
+  }
+
+  .imageContainer {
+    position: relative;
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wireframe {
+      max-height: 65vw !important;
+      flex-shrink: 0 !important;
+      margin: 0 -1000px 0 -1000px !important;
+    }
+  }
+}
+
+.section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #1c1d1f;
+  overflow-x: hidden;
+
+  .contentContainer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  ._container {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3em;
+
+    .header {
+      margin: 0;
+      line-height: 1.25;
+      font-size: clamp(22px, 5vw, 44px);
+      font-weight: 800;
+      color: #f7f8f8;
+    }
+
+    .description {
+      margin-top: 0.8em;
+      color: #726a6a;
+      line-height: 1.45;
+      font-weight: 500;
+      font-size: clamp(14px, 5vw, 22px);
+    }
+  }
+
+  .grid {
+    width: calc(100% + 48px);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin: 0 -24px;
+
+    .gridElement {
+      width: calc(33.3333% - 28px);
+      margin: 14px;
+      min-width: 200px;
+      padding: 52px;
+      background: linear-gradient(
+        180deg,
+        #28292c 0%,
+        rgba(39, 40, 43, 0.82) 100%
+      );
+      box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.3),
+        0px 4px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+        color: crimson;
+        height: 40px;
+        margin-top: 0;
+      }
+
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+        line-height: 1.22;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 0;
+        line-height: 1.4;
+        color: #726a6a;
+        margin-top: 0.8em;
+      }
+    }
+  }
+}

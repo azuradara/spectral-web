@@ -1,13 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Splash from 'components/Home/Splash.js';
+import Features from 'components/Home/Features.js';
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Spectral - A new tab replacement</title>
-      </Head>
-      <h1>cat</h1>
-    </div>
+    <>
+      <Splash />
+      <Features />
+    </>
   );
 }

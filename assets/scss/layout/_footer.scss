@@ -1,3 +1,58 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+footer {
+  border-top: 1px solid #292830;
+  margin: 0 8px;
+  display: block;
+
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 24px;
+    font-size: 14px;
+    color: #8a8f98;
+
+    .footerLogo {
+      display: flex;
+      color: #8a8f98;
+
+      p {
+        margin-left: 16px;
+      }
+    }
+
+    .stretch {
+      flex-grow: 1;
+    }
+
+    a {
+      transition: color 200ms ease-out 0s;
+      margin-left: 32px;
+      color: #8a8f98;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.spacer2 {
+  margin-bottom: 64px;
+}
+
+@media only screen and (max-width: 900px) {
+  footer {
+    .contentContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      .footerLogo {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
