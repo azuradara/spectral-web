@@ -2,6 +2,7 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -10,4 +11,11 @@
   width: 100%;
   min-height: 100vh;
   line-height: 1.53rem;
+}
+
+.contentContainer {
+  padding: 0 32px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }

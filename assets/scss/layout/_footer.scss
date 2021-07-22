@@ -12,14 +12,18 @@ footer {
     align-items: center;
     padding: 40px 24px;
     font-size: 14px;
+    max-width: 1200px;
+    margin: auto;
     color: #8a8f98;
 
     .footerLogo {
       display: flex;
       color: #8a8f98;
+      align-items: center;
 
       p {
         margin-left: 16px;
+        margin-top: 2px;
       }
     }
 

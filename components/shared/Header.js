@@ -34,9 +34,7 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`header ${scrolled && !mobileMenu ? 'headerScroll' : ''}`}
-    >
+    <header className={`nav ${scrolled && !mobileMenu ? 'navScroll' : ''}`}>
       {/* LOGO */}
       <div className="contentContainer">
         <Link href="/">
@@ -65,11 +63,11 @@ const Header = () => {
 
         {/* AUTH ROW */}
         <div className="authRow">
-          <a className="signUp" href="/signup">
+          <Link className="signUp" href="/signup">
             Sign up
-          </a>
+          </Link>
           <button className="appBtn_Btn" type="submit">
-            <p>App</p>
+            <p>Spectral</p>
             <Image src={angleRIcon} height={14} width={14} />
           </button>
         </div>
