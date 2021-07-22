@@ -12,7 +12,7 @@ export default function Changelog({ logs }) {
   return (
     <div className="contentContainer page">
       <Head>
-        <title>Changelog</title>
+        <title>Spectral - Changelog</title>
       </Head>
 
       <div className="heading">

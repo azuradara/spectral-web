@@ -1,7 +1,14 @@
 import PreFooter from 'components/Home/PreFooter';
 
 const Download = () => {
-  return <PreFooter />;
+  return (
+    <>
+      <Head>
+        <title>Spectral - Download</title>
+      </Head>
+      <PreFooter />
+    </>
+  );
 };
 
 export default Download;

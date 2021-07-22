@@ -63,6 +63,9 @@ const Signup = () => {
 
   return (
     <div className="signup contentContainer">
+      <Head>
+        <title>Spectral - Sign up</title>
+      </Head>
       <div className="_content">
         <form onSubmit={(e) => handleSubmit(e)} className="form-control">
           <div className="_container">
