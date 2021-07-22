@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,10 +46,9 @@ const Signup = () => {
       setLoading(true);
       setMessage(false);
       setErr(null);
-      const res = await axios.post(
-        'http://spectralapp.ddns.net/api/auth/signup',
-        userData
-      );
+
+      await axios.post('http://spectralapp.ddns.net/api/auth/signup', userData);
+
       setMessage('Account created, redirecting.');
       setLoading(false);
       setTimeout(() => {
@@ -147,14 +146,14 @@ const Signup = () => {
               </motion.p>
             )}
           </div>
-          <div class="sc-fzoant kZeKIC">
-            <div type="small" color="labelMuted" class="labelMuted">
+          <div className="sc-fzoant kZeKIC">
+            <div type="small" color="labelMuted" className="labelMuted">
               You acknowledge that you read, and agree to our{' '}
-              <span type="smallPlus" class="sc-AxirZ dqUfxv">
+              <span type="smallPlus" className="sc-AxirZ dqUfxv">
                 <Link href="/terms">Terms of Service</Link>
               </span>{' '}
               and our{' '}
-              <span type="smallPlus" class="sc-AxirZ dqUfxv">
+              <span type="smallPlus" className="sc-AxirZ dqUfxv">
                 <Link href="/privacy">Privacy Policy</Link>
               </span>
               .
