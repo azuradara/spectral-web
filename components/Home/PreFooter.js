@@ -19,7 +19,13 @@ const PreFooter = () => {
         </div>
         <div className="spacer" />
         <div className="buttons">
-          <button className="appBtn_Btn">
+          <button
+            onClick={() =>
+              (window.location.href =
+                'https://github.com/azuradara/spectral-app/releases')
+            }
+            className="appBtn_Btn"
+          >
             <h3>Download</h3>
             <Image src={downloadIcon} height={24} width={24} />
           </button>
