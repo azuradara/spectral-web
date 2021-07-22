@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import downloadIcon from 'assets/svg/download.svg';
 
 const Splash = () => {
+  const router = useRouter();
+
   return (
     <div id="splash">
       <div className="contentContainer">
@@ -75,7 +78,10 @@ const Splash = () => {
             },
           }}
         >
-          <button className="appBtn_Btn">
+          <button
+            onClick={() => router.push('/download')}
+            className="appBtn_Btn"
+          >
             <h3>Download Spectral</h3>
             <Image src={downloadIcon} height={24} width={24} />
           </button>

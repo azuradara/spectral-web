@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,6 +13,8 @@ import angleRIcon from 'assets/svg/angle-r_ico.svg';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     const watchScroll = () => {
@@ -48,11 +51,11 @@ const Header = () => {
         <div className="desktop">
           <div className="navigation">
             <div className="content">
+              <Link className="secondary" href="/download">
+                Download
+              </Link>
               <Link className="secondary" href="/changelog">
                 Changelog
-              </Link>
-              <Link className="secondary" href="/about">
-                About us
               </Link>
             </div>
           </div>
@@ -66,7 +69,11 @@ const Header = () => {
           <Link className="signUp" href="/signup">
             Sign up
           </Link>
-          <button className="appBtn_Btn" type="submit">
+          <button
+            onClick={() => router.push('/download')}
+            className="appBtn_Btn"
+            type="submit"
+          >
             <p>Spectral</p>
             <Image src={angleRIcon} height={14} width={14} />
           </button>

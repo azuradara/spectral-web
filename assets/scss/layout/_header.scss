@@ -141,10 +141,6 @@ header .contentContainer {
   align-items: center;
   gap: 0.5rem;
 
-  p {
-    padding-top: 3px;
-  }
-
   &:hover {
     box-shadow: rgba($color: crimson, $alpha: 0.5) 0px 1px 40px;
     transition: all 150ms ease 0s;

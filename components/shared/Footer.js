@@ -16,7 +16,7 @@ const Footer = () => {
 
         <Link href="https://github.com/azuradara">Github</Link>
         <Link href="https://twitter.com/azuradara">Twitter</Link>
-        <Link href="mailto:dara-@outlook.jp">Contact Us</Link>
+        <Link href="mailto:dara-@outlook.jp">Contact</Link>
         <Link href="/privacy">Privacy</Link>
         <Link href="/terms">Terms of Service</Link>
       </div>
