@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <meta charset="utf-8" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@azuradara" />
+        <meta name="theme-color" content="#1B1A16" />
         <meta
           property="twitter:image"
           content="https://spectral-web.vercel.app/images/changelog/2021-07-21.png"
