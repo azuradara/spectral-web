@@ -28,11 +28,6 @@ export default function Privacy({ log }) {
           <div className="post">
             <div className="right">
               <div>
-                {log.data.cover_image && (
-                  <figure>
-                    <img src={log.data.cover_image} />
-                  </figure>
-                )}
                 <div
                   dangerouslySetInnerHTML={{ __html: marked(log.content) }}
                 />
