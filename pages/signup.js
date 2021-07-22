@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import spinnerIcon from 'assets/svg/spinner.svg';
 

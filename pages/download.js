@@ -1,4 +1,5 @@
 import PreFooter from 'components/Home/PreFooter';
+import Head from 'next/head';
 
 const Download = () => {
   return (
