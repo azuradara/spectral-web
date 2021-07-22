@@ -68,6 +68,11 @@
       color: #dadfe7;
       line-height: 1.45;
 
+      strong {
+        font-weight: 700;
+        color: #dadfe7;
+      }
+
       a {
         color: crimson;
         transition: all 200ms ease-out;
@@ -148,4 +153,9 @@
       }
     }
   }
+}
+
+.privacy .post p,
+.privacy .post ul {
+  color: #8a8f98;
 }
