@@ -8,7 +8,6 @@ import Link from 'next/link';
 import logoText from 'assets/svg/logo_text.svg';
 import logoIcon from 'assets/svg/logo_ico.svg';
 import menuIcon from 'assets/svg/menu_ico.svg';
-import angleRIcon from 'assets/svg/angle-r_ico.svg';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,8 +41,8 @@ const Header = () => {
       <div className="contentContainer">
         <Link href="/">
           <div className="logo">
-            <Image src={logoIcon} height={32} width={32} />
-            <Image src={logoText} height={22} width="100%" />
+            <Image src={logoIcon} height={24} width={24} />
+            <Image src={logoText} height={20} width="100%" />
           </div>
         </Link>
 
@@ -74,8 +73,7 @@ const Header = () => {
             className="appBtn_Btn"
             type="submit"
           >
-            <p>Spectral</p>
-            <Image src={angleRIcon} height={14} width={14} />
+            Spectral -{'>'}
           </button>
         </div>
 

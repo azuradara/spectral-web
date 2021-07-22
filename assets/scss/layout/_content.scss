@@ -19,3 +19,9 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 900px) {
+  header .contentContainer {
+    padding: 0 24px !important;
+  }
+}
