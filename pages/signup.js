@@ -48,7 +48,7 @@ const Signup = () => {
       setMessage(false);
       setErr(null);
 
-      await axios.post('http://spectralapp.ddns.net/api/auth/signup', userData);
+      await axios.post('https://spectralapp.dev/api/auth/signup', userData);
 
       setMessage('Account created, redirecting.');
       setLoading(false);
