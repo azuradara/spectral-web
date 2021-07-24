@@ -86,11 +86,11 @@ const Header = () => {
         <div className="mobile mobileMenu">
           <div className="navigation">
             <div className="content">
+              <Link className="secondary" href="/download">
+                Download
+              </Link>
               <Link className="secondary" href="/changelog">
                 Changelog
-              </Link>
-              <Link className="secondary" href="/about">
-                About us
               </Link>
             </div>
           </div>
